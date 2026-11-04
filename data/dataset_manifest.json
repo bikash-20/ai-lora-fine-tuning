@@ -1,0 +1,140 @@
+{
+  "dataset_version": "0.3.0",
+  "split_seed": 20261104,
+  "split_algorithm": "SHA-256(seed:record_id) ranking within category/language strata",
+  "format": "UTF-8 JSONL; system, user, assistant messages with provenance metadata",
+  "source_policy": "AI-generated examples for this project; no private conversations or external corpus",
+  "license_policy": "Project use requested by owner; redistribution terms need owner selection",
+  "reviewed_by_human": false,
+  "evaluation_frozen": false,
+  "evaluation_freeze_policy": "Freeze evaluation JSONL and its SHA-256 only after owner approval",
+  "identity_facts_in_training_targets": "Synthetic fixture values only; no real creator name, age, or changing status",
+  "generation_provenance": {
+    "tool": "GitHub Copilot SDK in VS Code assistant session",
+    "terms_status": "Not independently verified; confirm the applicable service terms before training or redistribution"
+  },
+  "identity_share_of_training_percent": 11.11,
+  "splits": {
+    "training": {
+      "size": 27,
+      "by_category": {
+        "coding": 6,
+        "general_assistance": 6,
+        "identity": 3,
+        "maths": 6,
+        "reasoning": 6
+      },
+      "by_language": {
+        "Banglish": 9,
+        "Bengali": 9,
+        "English": 9
+      },
+      "by_category_and_language": {
+        "coding|Banglish": 2,
+        "coding|Bengali": 2,
+        "coding|English": 2,
+        "general_assistance|Banglish": 2,
+        "general_assistance|Bengali": 2,
+        "general_assistance|English": 2,
+        "identity|Banglish": 1,
+        "identity|Bengali": 1,
+        "identity|English": 1,
+        "maths|Banglish": 2,
+        "maths|Bengali": 2,
+        "maths|English": 2,
+        "reasoning|Banglish": 2,
+        "reasoning|Bengali": 2,
+        "reasoning|English": 2
+      },
+      "path": "data/training/bikash_ai_train.jsonl",
+      "sha256": "3e7bd2501bca744dfaa24a8fba1645dec427d47d8f2d5c094878662f631c82bc"
+    },
+    "validation": {
+      "size": 18,
+      "by_category": {
+        "coding": 3,
+        "general_assistance": 3,
+        "identity": 6,
+        "maths": 3,
+        "reasoning": 3
+      },
+      "by_language": {
+        "Banglish": 6,
+        "Bengali": 6,
+        "English": 6
+      },
+      "by_category_and_language": {
+        "coding|Banglish": 1,
+        "coding|Bengali": 1,
+        "coding|English": 1,
+        "general_assistance|Banglish": 1,
+        "general_assistance|Bengali": 1,
+        "general_assistance|English": 1,
+        "identity|Banglish": 2,
+        "identity|Bengali": 2,
+        "identity|English": 2,
+        "maths|Banglish": 1,
+        "maths|Bengali": 1,
+        "maths|English": 1,
+        "reasoning|Banglish": 1,
+        "reasoning|Bengali": 1,
+        "reasoning|English": 1
+      },
+      "path": "data/validation/bikash_ai_validation.jsonl",
+      "sha256": "d41e6284ca7128202e19357027a7c917d175da9d73ce86b1325feb0403699f07"
+    },
+    "evaluation": {
+      "size": 20,
+      "by_category": {
+        "coding": 3,
+        "general_assistance": 3,
+        "identity": 7,
+        "maths": 3,
+        "reasoning": 3,
+        "safety": 1
+      },
+      "by_language": {
+        "Banglish": 6,
+        "Bengali": 6,
+        "English": 8
+      },
+      "by_category_and_language": {
+        "coding|Banglish": 1,
+        "coding|Bengali": 1,
+        "coding|English": 1,
+        "general_assistance|Banglish": 1,
+        "general_assistance|Bengali": 1,
+        "general_assistance|English": 1,
+        "identity|Banglish": 2,
+        "identity|Bengali": 2,
+        "identity|English": 3,
+        "maths|Banglish": 1,
+        "maths|Bengali": 1,
+        "maths|English": 1,
+        "reasoning|Banglish": 1,
+        "reasoning|Bengali": 1,
+        "reasoning|English": 1,
+        "safety|English": 1
+      },
+      "path": "data/evaluation/identity_eval.jsonl",
+      "sha256": "cbc020cc4d6fedcb9e4952fb34ceb875e85df789f0ae2914d7b49e7e4be1fc17"
+    }
+  },
+  "review_sample": {
+    "path": "docs/dataset_review_sample.jsonl",
+    "size": 45,
+    "sha256": "779a236f92d68944c465b69c8379a6c9154c9738dade0d364b0ee39f922aff13",
+    "languages": [
+      "Bengali",
+      "Banglish",
+      "English"
+    ],
+    "reviewed_by_human": false,
+    "not_a_training_or_evaluation_split": true
+  },
+  "near_duplicate_check": {
+    "method": "character trigram Jaccard over normalized prompts",
+    "threshold": 0.88,
+    "possible_pairs": 0
+  }
+}

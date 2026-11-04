@@ -1,0 +1,15 @@
+selected_model: null
+selection_status: pending_phase_1_benchmark
+candidates:
+  - id: Qwen/Qwen3-1.7B
+    revision: 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e
+    license: Apache-2.0
+    source: https://huggingface.co/Qwen/Qwen3-1.7B
+  - id: google/gemma-3-1b-it
+    revision: dcc83ea841ab6100d6b47a070329e1ba4cf78752
+    license: Gemma Terms of Use; gated
+    source: https://huggingface.co/google/gemma-3-1b-it
+notes:
+  - Revisions were read from official model metadata; no weights or tokenizer files were downloaded.
+  - Preserve the selected model architecture, tokenizer, and official chat template.
+  - Verify MLX architecture support and prompt tokenization during Phase 1 after approval.

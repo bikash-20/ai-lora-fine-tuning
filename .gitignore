@@ -1,0 +1,41 @@
+# Model files, downloaded base weights, adapters, and quantized exports.
+models/*
+!models/*/
+models/**/*
+!models/**/
+!models/**/.gitkeep
+*.gguf
+*.safetensors
+*.mlx
+*.pt
+*.pth
+*.ckpt
+*.model
+*.onnx
+*.tflite
+
+# Local data and training outputs; curated JSONL under data/training,
+# data/validation, and data/evaluation remains version-controlled.
+data/raw/*
+!data/raw/.gitkeep
+checkpoints/
+**/checkpoints/
+experiments/*/checkpoints/
+
+# Python environments, bytecode, and local caches.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+*.egg-info/
+
+# Common model/runtime download caches.
+.huggingface/
+huggingface/
+mlx_cache/

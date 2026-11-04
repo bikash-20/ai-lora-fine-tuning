@@ -1,0 +1,7 @@
+file_access:
+  default: denied
+  approved_roots_required: true
+shell_execution:
+  enabled: false
+document_content:
+  trusted: false
