@@ -47,7 +47,7 @@
         "reasoning|English": 2
       },
       "path": "data/training/bikash_ai_train.jsonl",
-      "sha256": "3e7bd2501bca744dfaa24a8fba1645dec427d47d8f2d5c094878662f631c82bc"
+      "sha256": "51924c965f732e887f8e35a250090bbe72b693e9f1e75c4ce7e8943022e0e652"
     },
     "validation": {
       "size": 18,
@@ -81,7 +81,7 @@
         "reasoning|English": 1
       },
       "path": "data/validation/bikash_ai_validation.jsonl",
-      "sha256": "d41e6284ca7128202e19357027a7c917d175da9d73ce86b1325feb0403699f07"
+      "sha256": "517bf2698da49ab35aa7b31f94cb6933b4091c8f619f5bfe8e749fcba1741bb5"
     },
     "evaluation": {
       "size": 20,
@@ -117,13 +117,13 @@
         "safety|English": 1
       },
       "path": "data/evaluation/identity_eval.jsonl",
-      "sha256": "cbc020cc4d6fedcb9e4952fb34ceb875e85df789f0ae2914d7b49e7e4be1fc17"
+      "sha256": "b1fc78e2b163bf9ab2ae9f6dbbf1953c0cbf71aa3e08a44c08e3e854693a14da"
     }
   },
   "review_sample": {
     "path": "docs/dataset_review_sample.jsonl",
     "size": 45,
-    "sha256": "779a236f92d68944c465b69c8379a6c9154c9738dade0d364b0ee39f922aff13",
+    "sha256": "a4585ae972e76073e58fc3370411485b417b846b2d470e0ab08ac9f73d1fee69",
     "languages": [
       "Bengali",
       "Banglish",

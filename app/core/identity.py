@@ -30,14 +30,17 @@ def load_identity(path: Path = DEFAULT_IDENTITY_PATH) -> dict[str, Any]:
     return identity
 
 
-def _identity_facts(identity: dict[str, Any]) -> str:
+def _permanent_creator_identity(identity: dict[str, Any]) -> str:
     permanent = identity["permanent"]
+    return (
+        f"\nPermanent creator identity: You were created by {permanent['creator_name']}, "
+        f"a {permanent['creator_role']}. {permanent['project_origin']}"
+    )
+
+
+def _dynamic_creator_facts(identity: dict[str, Any]) -> str:
     dynamic = identity["dynamic_creator"]
     return (
-        f"Assistant name: {identity['assistant_name']}\n"
-        f"Creator: {permanent['creator_name']}\n"
-        f"Creator role: {permanent['creator_role']}\n"
-        f"Project origin: {permanent['project_origin']}\n"
         f"Creator age: {dynamic['age_years']} (as of {dynamic['age_as_of']})\n"
         f"Creator current status: {dynamic['current_status']} "
         f"(as of {dynamic['status_as_of']})"
@@ -50,7 +53,8 @@ def render_system_prompt(
     template = Template(template_path.read_text(encoding="utf-8"))
     return template.substitute(
         assistant_name=identity["assistant_name"],
-        identity_facts=_identity_facts(identity),
+        permanent_creator_identity=_permanent_creator_identity(identity),
+        current_creator_facts=_dynamic_creator_facts(identity),
     )
 
 
@@ -72,5 +76,6 @@ def render_training_prompt(identity_facts: str = "No creator-specific facts are 
     template = Template(DEFAULT_PROMPT_PATH.read_text(encoding="utf-8"))
     return template.substitute(
         assistant_name="Bikash-AI",
-        identity_facts=identity_facts,
+        permanent_creator_identity="",
+        current_creator_facts=identity_facts,
     )

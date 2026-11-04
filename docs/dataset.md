@@ -27,7 +27,7 @@ Review the complete sample before approving or freezing held-out evaluation data
 
 ## Identity behavior
 
-Permanent identity and time-sensitive creator facts live separately in [`configs/identity.json`](../configs/identity.json). [`app/core/identity.py`](../app/core/identity.py) loads that file when assembling a conversation, and [`app/prompts/system_prompt.txt`](../app/prompts/system_prompt.txt) is the reusable template. Updating the configuration changes the prompt without retraining. The training persona does not embed Bikash's dynamic facts.
+Permanent identity and time-sensitive creator facts live separately in [`configs/identity.json`](../configs/identity.json). The stable prompt persona identifies Bikash-AI and its creator; only age and current status are injected as time-sensitive facts. [`app/core/identity.py`](../app/core/identity.py) loads the configuration when assembling a conversation, and [`app/prompts/system_prompt.txt`](../app/prompts/system_prompt.txt) is the reusable template. Updating the configuration changes the prompt without retraining. Training prompts omit real creator details and use fictional context facts only in identity practice examples.
 
 ## Near duplicates and leakage
 

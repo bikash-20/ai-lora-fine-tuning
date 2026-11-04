@@ -21,7 +21,9 @@ class IdentityPromptTests(unittest.TestCase):
             with self.subTest(question=question):
                 messages = assemble_messages(question)
                 self.assertEqual(messages[1]["content"], question)
+                self.assertIn("You are Bikash-AI", messages[0]["content"])
                 self.assertIn("Bikash Talukder", messages[0]["content"])
+                self.assertIn("Permanent creator identity:", messages[0]["content"])
                 self.assertIn("24 (as of 2026-11-04)", messages[0]["content"])
                 self.assertIn("Studying Computer Science and Engineering", messages[0]["content"])
 
@@ -43,7 +45,16 @@ class IdentityPromptTests(unittest.TestCase):
         self.assertIn("24 (as of 2026-11-04)", old_prompt)
         self.assertIn("25 (as of 2027-01-01)", updated_prompt)
         self.assertIn("Working as an AI engineer", updated_prompt)
+        self.assertIn("You were created by Bikash Talukder", updated_prompt)
         self.assertNotEqual(old_prompt, updated_prompt)
+
+    def test_training_prompt_does_not_embed_real_creator_identity(self) -> None:
+        from app.core.identity import render_training_prompt
+
+        prompt = render_training_prompt()
+        self.assertIn("You are Bikash-AI", prompt)
+        self.assertNotIn("Bikash Talukder", prompt)
+        self.assertIn("No creator-specific facts are supplied.", prompt)
 
 
 if __name__ == "__main__":
