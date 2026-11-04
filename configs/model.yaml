@@ -1,5 +1,5 @@
 selected_model: null
-selection_status: pending_phase_1_benchmark
+selection_status: pending_candidate_comparison
 candidates:
   - id: Qwen/Qwen3-1.7B
     revision: 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e
@@ -10,6 +10,7 @@ candidates:
     license: Gemma Terms of Use; gated
     source: https://huggingface.co/google/gemma-3-1b-it
 notes:
-  - Revisions were read from official model metadata; no weights or tokenizer files were downloaded.
+  - Qwen3-1.7B weights and tokenizer were downloaded at the approved revision for an inference-only baseline; see docs/baseline.md.
+  - Gemma remains not downloaded. The Qwen baseline is not a final model selection.
   - Preserve the selected model architecture, tokenizer, and official chat template.
-  - Verify MLX architecture support and prompt tokenization during Phase 1 after approval.
+  - Qwen3 architecture support and official chat-template tokenization were verified with mlx-lm 0.32.2.

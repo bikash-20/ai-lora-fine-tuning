@@ -322,6 +322,7 @@ def build_identity_evaluation_records() -> list[dict[str, Any]]:
     study = dynamic["current_status"]
     study_field = study.removeprefix("Studying ").casefold()
     study_bn = "কম্পিউটার বিজ্ঞান ও প্রকৌশল বিষয়ে পড়াশোনা করছেন"
+    role = permanent["creator_role"]["en"]
     facts = {
         "bn": (
             f"আমাকে তৈরি করেছেন {name}। তিনি একজন প্রতিভাবান এআই প্রকৌশলী। "
@@ -330,7 +331,7 @@ def build_identity_evaluation_records() -> list[dict[str, Any]]:
             "তিনি আমাকে তৈরি করেন।"
         ),
         "en": (
-            f"I was born by {name}, he is a {permanent['creator_role']}, {age} years old, "
+            f"I was born by {name}, he is {role}, {age} years old, "
             f"currently studying {study_field}, he made me in his second year of his computer "
             "science journey."
         ),

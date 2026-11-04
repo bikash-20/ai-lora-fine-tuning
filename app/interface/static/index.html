@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111a24">
+    <meta name="description" content="A private, offline chat with Cendrix AI.">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Cendrix AI</title>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="Cendrix AI home">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span><strong>Cendrix</strong><small>PERSONAL AI</small></span>
+        </a>
+        <button id="new-chat" class="new-chat" type="button"><span aria-hidden="true">＋</span> New chat</button>
+        <p class="side-label">RECENT</p>
+        <nav id="conversation-list" class="conversation-list" aria-label="Recent conversations"></nav>
+        <div class="privacy-card">
+          <span class="privacy-icon" aria-hidden="true">◉</span>
+          <div><strong>Private by design</strong><p>Runs on this device. Your chats stay local.</p></div>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <button id="mobile-new-chat" class="icon-button mobile-only" aria-label="New chat" type="button">＋</button>
+          <div class="model-status"><span class="status-dot"></span><span>Qwen3 · Offline</span></div>
+          <button class="menu-button" aria-label="Open menu" type="button" disabled>•••</button>
+        </header>
+        <section id="chat" class="chat" aria-live="polite">
+          <div id="welcome" class="welcome">
+            <div class="welcome-emblem"><span></span></div>
+            <p class="eyebrow">YOUR PRIVATE AI COMPANION</p>
+            <h1>A little help,<br><em>right here.</em></h1>
+            <p class="welcome-copy">Ask a question, work through an idea, or start with one of these.</p>
+            <div class="suggestions">
+              <button type="button" data-prompt="Explain how a Python for-loop works with a small example."><span>⌘</span><strong>Learn something</strong><small>Explain a Python for-loop</small></button>
+              <button type="button" data-prompt="Help me solve 18 × 24 step by step."><span>∑</span><strong>Solve a problem</strong><small>Work through the steps</small></button>
+              <button type="button" data-prompt="Help me write a short, friendly email asking to reschedule a meeting."><span>✳</span><strong>Find the words</strong><small>Draft a friendly email</small></button>
+            </div>
+          </div>
+          <div id="messages" class="messages"></div>
+        </section>
+        <form id="composer" class="composer">
+          <label class="sr-only" for="message">Message Cendrix</label>
+          <textarea id="message" rows="1" maxlength="8000" placeholder="Message Cendrix..." required></textarea>
+          <div class="composer-foot">
+            <span class="composer-hint">Your conversation is stored on this device</span>
+            <button id="send" class="send-button" type="submit" aria-label="Send message"><span>↑</span></button>
+          </div>
+        </form>
+        <footer class="footer">Cendrix can make mistakes. Check important information.</footer>
+      </main>
+    </div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

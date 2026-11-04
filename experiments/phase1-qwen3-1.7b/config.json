@@ -1,0 +1,42 @@
+{
+  "experiment_id": "phase1-qwen3-1.7b",
+  "purpose": "Phase 1 inference baseline only; no training or evaluation freeze",
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "model_path": "models/base/Qwen3-1.7B",
+  "runtime": {
+    "python": "3.12.13",
+    "mlx_lm": "0.32.2",
+    "platform": "macOS Apple Silicon MLX"
+  },
+  "evaluation": {
+    "path": "data/evaluation/identity_eval.jsonl",
+    "manifest_path": "data/dataset_manifest.json",
+    "expected_dataset_version": "0.3.0",
+    "expected_sha256": "b1fc78e2b163bf9ab2ae9f6dbbf1953c0cbf71aa3e08a44c08e3e854693a14da"
+  },
+  "dataset_split_sha256": {
+    "training": "51924c965f732e887f8e35a250090bbe72b693e9f1e75c4ce7e8943022e0e652",
+    "validation": "517bf2698da49ab35aa7b31f94cb6933b4091c8f619f5bfe8e749fcba1741bb5",
+    "evaluation": "b1fc78e2b163bf9ab2ae9f6dbbf1953c0cbf71aa3e08a44c08e3e854693a14da"
+  },
+  "generation": {
+    "thinking_mode": false,
+    "temperature": 0.0,
+    "seed": 20261104,
+    "max_tokens": 256,
+    "warmup_max_tokens": 24,
+    "quantization": "none; load original repository weights"
+  },
+  "candidate_lora_target_modules": [
+    "self_attn.q_proj",
+    "self_attn.k_proj",
+    "self_attn.v_proj",
+    "self_attn.o_proj",
+    "mlp.gate_proj",
+    "mlp.up_proj",
+    "mlp.down_proj"
+  ],
+  "training_started": false,
+  "evaluation_frozen": false
+}

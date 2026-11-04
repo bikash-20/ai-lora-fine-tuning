@@ -23,6 +23,12 @@ def load_identity(path: Path = DEFAULT_IDENTITY_PATH) -> dict[str, Any]:
     dynamic = identity["dynamic_creator"]
     if any(key not in permanent for key in ("creator_name", "creator_role", "project_origin")):
         raise ValueError(f"Identity configuration has incomplete permanent facts: {path}")
+    roles = permanent["creator_role"]
+    if not isinstance(roles, dict) or any(
+        not isinstance(roles.get(language), str) or not roles[language].strip()
+        for language in ("en", "bn", "bx")
+    ):
+        raise ValueError(f"Identity configuration has incomplete localized creator roles: {path}")
     if any(key not in dynamic for key in ("age_years", "age_as_of", "current_status", "status_as_of")):
         raise ValueError(f"Identity configuration has incomplete dynamic facts: {path}")
     if not isinstance(dynamic["age_years"], int) or dynamic["age_years"] < 0:
@@ -34,7 +40,7 @@ def _permanent_creator_identity(identity: dict[str, Any]) -> str:
     permanent = identity["permanent"]
     return (
         f"\nPermanent creator identity: You were created by {permanent['creator_name']}, "
-        f"a {permanent['creator_role']}. {permanent['project_origin']}"
+        f"{permanent['creator_role']['en']}. {permanent['project_origin']}"
     )
 
 

@@ -21,7 +21,7 @@ class IdentityPromptTests(unittest.TestCase):
             with self.subTest(question=question):
                 messages = assemble_messages(question)
                 self.assertEqual(messages[1]["content"], question)
-                self.assertIn("You are Bikash-AI", messages[0]["content"])
+                self.assertIn("You are Cendrix AI", messages[0]["content"])
                 self.assertIn("Bikash Talukder", messages[0]["content"])
                 self.assertIn("Permanent creator identity:", messages[0]["content"])
                 self.assertIn("24 (as of 2026-11-04)", messages[0]["content"])

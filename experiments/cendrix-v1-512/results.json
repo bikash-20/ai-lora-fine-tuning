@@ -1,0 +1,230 @@
+{
+  "experiment_id": "cendrix-v1-512",
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "model_path": "models/base/Qwen3-1.7B",
+  "quantization": "none; original local model weights",
+  "runtime": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "mlx_lm": "0.32.2",
+    "mlx": "0.32.4",
+    "mlx_metal": "0.32.4"
+  },
+  "tokenizer": {
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "thinking_mode": false
+  },
+  "dataset": {
+    "path": "data/evaluation/identity_eval.jsonl",
+    "sha256": "b1fc78e2b163bf9ab2ae9f6dbbf1953c0cbf71aa3e08a44c08e3e854693a14da",
+    "records": 20,
+    "evaluation_frozen": false
+  },
+  "generation": {
+    "thinking_mode": false,
+    "temperature": 0.0,
+    "seed": 20261104,
+    "max_tokens": 512,
+    "quantization": "none; original local model weights"
+  },
+  "measurements": {
+    "model_load_seconds": 2.1911904590087943,
+    "warmup_seconds_excluded": 0.7650637910119258,
+    "end_to_end_tokens_per_second": 24.730162584399363,
+    "median_decode_tokens_per_second": 26.224802171429452,
+    "peak_mlx_memory_during_load_gb": 3.44114996,
+    "peak_mlx_memory_during_eval_gb": 3.658485872,
+    "peak_mlx_memory_gb": 3.658485872,
+    "process_peak_rss_bytes": 2108309504,
+    "process_peak_rss_delta_from_preload_bytes": 2026979328,
+    "evaluation_generated_tokens": 4151,
+    "max_token_limit_hits": 2,
+    "max_token_limit": 512
+  },
+  "per_prompt_metrics": [
+    {
+      "record_id": "coding-bn-02",
+      "category": "coding",
+      "language": "Bengali",
+      "generated_tokens": 512,
+      "finish_reason": "length",
+      "generation_tokens_per_second": 25.644812492888434,
+      "end_to_end_seconds": 20.33510950001073
+    },
+    {
+      "record_id": "coding-bx-04",
+      "category": "coding",
+      "language": "Banglish",
+      "generated_tokens": 471,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 25.989613686834524,
+      "end_to_end_seconds": 18.486341749987332
+    },
+    {
+      "record_id": "coding-en-03",
+      "category": "coding",
+      "language": "English",
+      "generated_tokens": 354,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 25.995384729278587,
+      "end_to_end_seconds": 13.979173166007968
+    },
+    {
+      "record_id": "general_assistance-bn-01",
+      "category": "general_assistance",
+      "language": "Bengali",
+      "generated_tokens": 512,
+      "finish_reason": "length",
+      "generation_tokens_per_second": 25.82836732107311,
+      "end_to_end_seconds": 20.19033633300569
+    },
+    {
+      "record_id": "general_assistance-bx-03",
+      "category": "general_assistance",
+      "language": "Banglish",
+      "generated_tokens": 38,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.834353922936035,
+      "end_to_end_seconds": 1.7769750829902478
+    },
+    {
+      "record_id": "general_assistance-en-04",
+      "category": "general_assistance",
+      "language": "English",
+      "generated_tokens": 340,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 25.59227847842296,
+      "end_to_end_seconds": 13.64674341600039
+    },
+    {
+      "record_id": "identity-eval-bn",
+      "category": "identity",
+      "language": "Bengali",
+      "generated_tokens": 174,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 25.216380061798272,
+      "end_to_end_seconds": 7.341541999980109
+    },
+    {
+      "record_id": "identity-eval-bx",
+      "category": "identity",
+      "language": "Banglish",
+      "generated_tokens": 40,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 23.204670926279533,
+      "end_to_end_seconds": 2.153687333018752
+    },
+    {
+      "record_id": "identity-eval-en",
+      "category": "identity",
+      "language": "English",
+      "generated_tokens": 39,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.669903526561562,
+      "end_to_end_seconds": 1.894052791991271
+    },
+    {
+      "record_id": "identity-eval-en_natural",
+      "category": "identity",
+      "language": "English",
+      "generated_tokens": 30,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.826299050583753,
+      "end_to_end_seconds": 1.5434299579937942
+    },
+    {
+      "record_id": "identity-eval-no-facts-bn",
+      "category": "identity",
+      "language": "Bengali",
+      "generated_tokens": 43,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.186712938023607,
+      "end_to_end_seconds": 2.0076951250084676
+    },
+    {
+      "record_id": "identity-eval-no-facts-bx",
+      "category": "identity",
+      "language": "Banglish",
+      "generated_tokens": 40,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.85759882284718,
+      "end_to_end_seconds": 1.8500757079746109
+    },
+    {
+      "record_id": "identity-eval-no-facts-en",
+      "category": "identity",
+      "language": "English",
+      "generated_tokens": 29,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 27.104989667233035,
+      "end_to_end_seconds": 1.4260325420182198
+    },
+    {
+      "record_id": "maths-bn-04",
+      "category": "maths",
+      "language": "Bengali",
+      "generated_tokens": 450,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.029771753900057,
+      "end_to_end_seconds": 17.71536100000958
+    },
+    {
+      "record_id": "maths-bx-02",
+      "category": "maths",
+      "language": "Banglish",
+      "generated_tokens": 140,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.298785682377208,
+      "end_to_end_seconds": 5.684428167005535
+    },
+    {
+      "record_id": "maths-en-01",
+      "category": "maths",
+      "language": "English",
+      "generated_tokens": 137,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.37517922364335,
+      "end_to_end_seconds": 5.554415207996499
+    },
+    {
+      "record_id": "reasoning-bn-02",
+      "category": "reasoning",
+      "language": "Bengali",
+      "generated_tokens": 433,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 25.853276159129198,
+      "end_to_end_seconds": 17.178394916991238
+    },
+    {
+      "record_id": "reasoning-bx-01",
+      "category": "reasoning",
+      "language": "Banglish",
+      "generated_tokens": 125,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.262891404835294,
+      "end_to_end_seconds": 5.12655879202066
+    },
+    {
+      "record_id": "reasoning-en-04",
+      "category": "reasoning",
+      "language": "English",
+      "generated_tokens": 166,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.31947961238206,
+      "end_to_end_seconds": 6.666895833011949
+    },
+    {
+      "record_id": "safety-en-01",
+      "category": "safety",
+      "language": "English",
+      "generated_tokens": 78,
+      "finish_reason": "stop",
+      "generation_tokens_per_second": 26.547651123285235,
+      "end_to_end_seconds": 3.2944582079944666
+    }
+  ],
+  "training_started": false,
+  "evaluation_frozen": false
+}

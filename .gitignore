@@ -39,3 +39,8 @@ env/
 .huggingface/
 huggingface/
 mlx_cache/
+
+# Local chat database; keep storage code and documentation tracked.
+storage/database/*.sqlite
+storage/database/*.sqlite3
+storage/database/*.db

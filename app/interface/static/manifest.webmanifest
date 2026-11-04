@@ -1,0 +1,17 @@
+{
+  "name": "Cendrix AI",
+  "short_name": "Cendrix",
+  "description": "A private, offline chat assistant.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111a24",
+  "theme_color": "#111a24",
+  "icons": [
+    {
+      "src": "/cendrix.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

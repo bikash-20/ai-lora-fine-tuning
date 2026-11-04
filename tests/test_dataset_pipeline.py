@@ -66,7 +66,7 @@ class DatasetPipelineTests(unittest.TestCase):
         )
         self.assertEqual(
             en_identity["messages"][2]["content"],
-            "I was born by Bikash Talukder, he is a talented AI engineer, 24 years old, currently studying computer science and engineering, he made me in his second year of his computer science journey.",
+            "I was born by Bikash Talukder, he is an AI engineer, 24 years old, currently studying computer science and engineering, he made me in his second year of his computer science journey.",
         )
         no_facts = [
             row for row in identity_rows if row["id"].startswith("identity-eval-no-facts-")

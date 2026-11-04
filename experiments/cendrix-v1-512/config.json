@@ -1,0 +1,26 @@
+{
+  "experiment_id": "cendrix-v1-512",
+  "purpose": "Inference-only baseline using the unchanged held-out evaluation prompts and a 512-token cap.",
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "model_path": "models/base/Qwen3-1.7B",
+  "runtime": {
+    "python": "3.12.13",
+    "mlx_lm": "0.32.2",
+    "platform": "macOS Apple Silicon MLX"
+  },
+  "evaluation": {
+    "path": "data/evaluation/identity_eval.jsonl",
+    "dataset_version": "0.3.0",
+    "sha256": "b1fc78e2b163bf9ab2ae9f6dbbf1953c0cbf71aa3e08a44c08e3e854693a14da",
+    "evaluation_frozen": false
+  },
+  "generation": {
+    "thinking_mode": false,
+    "temperature": 0.0,
+    "seed": 20261104,
+    "max_tokens": 512,
+    "quantization": "none; original local model weights"
+  },
+  "training_started": false
+}
